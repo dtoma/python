@@ -1,0 +1,44 @@
+% your document class here
+\documentclass[10pt]{report}
+% package necessary to inset pdf as image
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Company Name}
+\lhead{\leftmark}
+\rfoot{Copyright (c) Some Company ltd. 2010-2019}
+\lfoot{\thepage}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+\chapter{Sample Chapter}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin a felis sagittis hendrerit. Suspendisse consequat lectus ac ipsum semper, id rutrum orci fermentum. Curabitur commodo tellus quis arcu congue, ac aliquam orci ullamcorper. Suspendisse ullamcorper, sem et ultricies sagittis, arcu augue rhoncus dui, eu tincidunt metus ante ac ante. Cras pharetra, urna eu maximus egestas, sem ipsum faucibus leo, sit amet rutrum risus ipsum accumsan diam. Sed tempor nibh metus, a condimentum lorem viverra sed. Mauris pretium efficitur tempus. Praesent eu mi malesuada, malesuada justo sit amet, posuere sem. Praesent pulvinar libero et enim auctor eleifend. Suspendisse vitae consequat felis. Pellentesque ut ultricies tortor. Nam at arcu ac arcu porta gravida nec vel risus. Praesent dui magna, pellentesque vitae tempor eu, efficitur sit amet eros.
+
+\section{Some 2 figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{example_1.pdf}
+	\caption{Our first figure.}
+\end{figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin a felis sagittis hendrerit. Suspendisse consequat lectus ac ipsum semper, id rutrum orci fermentum. Curabitur commodo tellus quis arcu congue, ac aliquam orci ullamcorper. Suspendisse ullamcorper, sem et ultricies sagittis, arcu augue rhoncus dui, eu tincidunt metus ante ac ante. Cras pharetra, urna eu maximus egestas, sem ipsum faucibus leo, sit amet rutrum risus ipsum accumsan diam. Sed tempor nibh metus, a condimentum lorem viverra sed. Mauris pretium efficitur tempus. Praesent eu mi malesuada, malesuada justo sit amet, posuere sem. Praesent pulvinar libero et enim auctor eleifend. Suspendisse vitae consequat felis. Pellentesque ut ultricies tortor. Nam at arcu ac arcu porta gravida nec vel risus. Praesent dui magna, pellentesque vitae tempor eu, efficitur sit amet eros.
+
+\section{Some 3D figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin a felis sagittis hendrerit. Suspendisse consequat lectus ac ipsum semper, id rutrum orci fermentum. Curabitur commodo tellus quis arcu congue, ac aliquam orci ullamcorper. Suspendisse ullamcorper, sem et ultricies sagittis, arcu augue rhoncus dui, eu tincidunt metus ante ac ante. Cras pharetra, urna eu maximus egestas, sem ipsum faucibus leo, sit amet rutrum risus ipsum accumsan diam. Sed tempor nibh metus, a condimentum lorem viverra sed. Mauris pretium efficitur tempus. Praesent eu mi malesuada, malesuada justo sit amet, posuere sem. Praesent pulvinar libero et enim auctor eleifend. Suspendisse vitae consequat felis. Pellentesque ut ultricies tortor. Nam at arcu ac arcu porta gravida nec vel risus. Praesent dui magna, pellentesque vitae tempor eu, efficitur sit amet eros.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{plot3d_ex.pdf}
+	\caption{3D figure.}
+\end{figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin a felis sagittis hendrerit. Suspendisse consequat lectus ac ipsum semper, id rutrum orci fermentum. Curabitur commodo tellus quis arcu congue, ac aliquam orci ullamcorper. Suspendisse ullamcorper, sem et ultricies sagittis, arcu augue rhoncus dui, eu tincidunt metus ante ac ante. Cras pharetra, urna eu maximus egestas, sem ipsum faucibus leo, sit amet rutrum risus ipsum accumsan diam. Sed tempor nibh metus, a condimentum lorem viverra sed. Mauris pretium efficitur tempus. Praesent eu mi malesuada, malesuada justo sit amet, posuere sem. Praesent pulvinar libero et enim auctor eleifend. Suspendisse vitae consequat felis. Pellentesque ut ultricies tortor. Nam at arcu ac arcu porta gravida nec vel risus. Praesent dui magna, pellentesque vitae tempor eu, efficitur sit amet eros.
+
+\end{document}
