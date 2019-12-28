@@ -1,7 +1,7 @@
 import random
 from typing import List, TypeVar
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def fisher_yates_shuffle(items: List[T]) -> List[T]:
