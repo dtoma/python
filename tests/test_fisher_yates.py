@@ -5,7 +5,7 @@ import unittest
 import hypothesis
 import hypothesis.strategies as st
 
-import shuffle
+from python.fisher_yates.shuffle import fisher_yates_shuffle
 
 
 class TestFisherYatesShuffle(unittest.TestCase):
@@ -18,7 +18,7 @@ class TestFisherYatesShuffle(unittest.TestCase):
         - Length does not change after shuffling
         - Content doesn't change after shuffling
         """
-        shuffled = shuffle.fisher_yates_shuffle(integers)
+        shuffled = fisher_yates_shuffle(integers)
         self.assertEqual(len(integers), len(shuffled))
         self.assertEqual(set(integers), set(shuffled))
 
@@ -29,7 +29,7 @@ class TestFisherYatesShuffle(unittest.TestCase):
         - With larger lists, we expect that the order changes
           after a shuffle
         """
-        shuffled = shuffle.fisher_yates_shuffle(integers)
+        shuffled = fisher_yates_shuffle(integers)
         self.assertEqual(set(integers), set(shuffled))
         self.assertNotEqual(integers, shuffled)
 
