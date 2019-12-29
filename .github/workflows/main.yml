@@ -24,10 +24,10 @@ jobs:
         pip install poetry
         poetry install
 
-    - name: Lint with mypy
+    - name: Lint
       run: |
-        poetry run mypy ./python/
+        poetry run invoke lint
 
-    - name: Test with unittest
+    - name: Test
       run: |
-        poetry run python -m unittest
+        poetry run invoke test

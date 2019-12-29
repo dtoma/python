@@ -9,7 +9,6 @@ from python.fisher_yates.shuffle import fisher_yates_shuffle
 
 
 class TestFisherYatesShuffle(unittest.TestCase):
-
     @hypothesis.given(st.lists(st.integers(), unique=True))
     @hypothesis.example([])
     def test_property_length(self, integers):
@@ -32,8 +31,3 @@ class TestFisherYatesShuffle(unittest.TestCase):
         shuffled = fisher_yates_shuffle(integers)
         self.assertEqual(set(integers), set(shuffled))
         self.assertNotEqual(integers, shuffled)
-
-
-
-if __name__ == '__main__':
-    unittest.main()
