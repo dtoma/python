@@ -3,7 +3,7 @@ from invoke import task
 
 @task
 def fmt(c):
-    c.run("black .")
+    c.run("black ./python/ ./tests/")
 
 
 @task
