@@ -18,6 +18,9 @@ ipython = "^7.11"
 jupyter = "^1.0"
 invoke = "^1.3"
 
+[tool.poetry.scripts]
+cpp-format = 'python.cpp_formatter:run'
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
