@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <form action='/rss' method='GET'>
+        Add RSS Feed: <input type="text" name="feed_url" style="width: 300px;">
+        <input type="submit" name="display">
+    </form>
+    <hr>
+
+    {% for item in feed_items %}
+    <div style="border: solid 1px black; margin-bottom: 5px; padding: 5px;">
+        <a href='/read?link={{ item.link }}'>{{ item.title }}</a><br>
+        <i>{{ item.site }}</i><br>
+        {{ item.description }}
+    </div>
+    {% endfor %}
+
+{% endblock %}
