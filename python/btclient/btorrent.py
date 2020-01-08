@@ -6,7 +6,7 @@ https://effbot.org/zone/bencode.htm
 
 import re
 
-START_END_REGEX = re.compile("([idel])|(\d+):|(-?\d+)")
+START_END_REGEX = re.compile("(?P<mark>[idel])|(?P<str>\d+):|(?P<int>-?\d+)")
 
 
 def tokenize(file_bytes):
@@ -28,15 +28,18 @@ def tokenize(file_bytes):
     i = 0
     file_length = len(file_bytes)
     while i < file_length:
-        m = START_END_REGEX.match(file_bytes, i)
-        s = m.group(m.lastindex)
-        i = m.end()
-        if m.lastindex == 2:
+        match = START_END_REGEX.match(file_bytes, i)
+        # match_len = match.group(match.lastindex)
+        i = match.end()
+        if match.group("str"):
             yield "s"
-            yield file_bytes[i : i + int(s)]
-            i += int(s)
-        else:
-            yield s
+            str_len = int(match.group("str"))
+            yield file_bytes[i : i + str_len]
+            i += str_len
+        elif match.group("mark"):
+            yield match.group("mark")
+        elif match.group("int"):
+            yield match.group("int")
 
 
 def decode_item(get_next, token):
