@@ -2,7 +2,9 @@
 
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from cgi import parse_header, parse_multipart, parse_qs, escape
+from cgi import parse_header, parse_multipart
+from html import escape
+from urllib.parse import parse_qs
 from subprocess import Popen, PIPE
 
 
