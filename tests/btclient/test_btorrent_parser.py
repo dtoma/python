@@ -33,8 +33,10 @@ def composite_list(draw):
     d = draw(
         st.one_of(
             st.builds(bencode_integer, st.integers()),
-            st.builds(bencode_bytes, st.text(min_size=1)),
-            st.builds(bencode_list, st.lists(composite_list(), min_size=1)),
+            st.builds(bencode_bytes, st.text(min_size=1, max_size=10)),
+            st.builds(
+                bencode_list, st.lists(composite_list(), min_size=1, max_size=10)
+            ),
         )
     )
     hypothesis.assume(d is not None)

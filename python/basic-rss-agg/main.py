@@ -1,10 +1,10 @@
-import click
-from contextlib import contextmanager
-from flask import Flask, render_template, request, redirect, url_for, g
-import feedparser
 import sqlite3
 import urllib.parse as urlp
+from contextlib import contextmanager
 
+import click
+import feedparser
+from flask import Flask, g, redirect, render_template, request, url_for
 
 DATABASE = "feed.db"
 app = Flask(__name__)

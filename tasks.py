@@ -20,3 +20,8 @@ def clear_poetry_cache(c):
 @task
 def lint(c):
     c.run("mypy ./python/ ./tests/")
+
+
+@task
+def sort_imports(c):
+    c.run("isort -rc ./python/ ./tests/")

@@ -1,5 +1,6 @@
-import matplotlib.pyplot as plt
 import numpy as np
+
+import matplotlib.pyplot as plt
 
 
 def vectorize_sequences(sequences, dimension=10000):

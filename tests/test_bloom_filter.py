@@ -1,5 +1,5 @@
-from random import shuffle
 import unittest
+from random import shuffle
 
 from python.bloomfilter.bloom import BloomFilter
 

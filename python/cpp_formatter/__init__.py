@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
 
-from http.server import BaseHTTPRequestHandler, HTTPServer
 from cgi import parse_header, parse_multipart
 from html import escape
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from subprocess import PIPE, Popen
 from urllib.parse import parse_qs
-from subprocess import Popen, PIPE
-
 
 INDEX_HTML = """<html>
 <head><title>CppFormatter</title></head>

@@ -8,6 +8,10 @@ authors = ["Damien Toma <damientoma.pro@gmail.com>"]
 python = "^3.6"
 pandas = "^0.25.3"
 numpy = "^1.18"
+flask = "^1.1"
+feedparser = "^5.2"
+attrs = "^19.3"
+pyyaml = "^5.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
@@ -17,6 +21,7 @@ mypy = "^0.761.0"
 ipython = "^7.11"
 jupyter = "^1.0"
 invoke = "^1.3"
+isort = "^4.3"
 
 [tool.poetry.scripts]
 cpp-format = 'python.cpp_formatter:run'
